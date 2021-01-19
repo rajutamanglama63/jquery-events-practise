@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <title>jquery events practise</title>
+</head>
+<body>
+    <header>
+		<h1>jQuery events practise</h1>
+	</header>
+	<div id="container">
+		<h3>Mouse Events</h3>
+		<button id="btn1" class="btnClass">Button 1</button>
+		<button id="btn2">Button 2</button>
+		<p class="para1">jQuery is built on top of JavaScript, a rich and expressive language in its own right. This section covers the basic concepts of JavaScript, as well as some frequent pitfalls for people who have not used JavaScript before. While it will be of particular value to people with no programming experience</p>
+		<h1 id="coords"></h1>
+		<hr>
+		<form id="form">
+			<label>Name</label><br>
+			<input type="text" id="name" name="name">
+			<br>
+			<label>Email</label><br>
+			<input type="text" id="email" name="email">
+			<br>
+			<label>Gender</label><br>
+			<select id="gender" name="gender">
+				<option value="male">Male</option>
+				<option value="female">Female</option>
+			</select>
+			<br>
+			<input type="submit" value="Submit">
+		</form>
+    </div>
+    
+    <script>
+        $(document).ready(function() {
+            /*
+            $('#btn1').click(function() {
+                alert('clicked!');
+            });
+
+            $('#btn1').on('click', function() {
+                alert('clicked!!');
+            });
+
+            $('#btn1').on('click', function() {
+                $('.para1').hide();
+                $('.para1').toggle();
+            })
+            $('#btn2').on('click', function() {
+                $('.para1').show();
+            })
+            
+
+            $('#btn1').dblclick(function() {
+                $('.para1').toggle();
+            })
+            $('#btn1').hover(function() {
+                $('.para1').toggle();
+            })
+            
+
+            $('#btn1').on('mouseenter', function() {
+                $('.para1').toggle();
+            }) 
+            $('#btn1').on('mouseleave', function() {
+                $('.para1').toggle();
+            })
+
+            $('#btn1').on('mousemove', function() {
+                $('.para1').toggle();
+            })
+            $('#btn1').on('mouseup', function() {
+                $('.para1').toggle();
+            })
+           
+            $('#btn1').on('mousedown', function() {
+                $('.para1').toggle();
+            })
+           
+
+            $('#btn1').click(function(e) {
+                // alert(e.target.id);
+                // alert(e.target.innerHTML);
+                // alert(e.target.outerHTML);
+                alert(e.target.className);
+            })
+           
+
+            $(document).on('mousemove', function(e) {
+                $('#coords').html('Coords: Y: '+e.clientY+" X: "+e.clientX);
+            })
+            
+
+            $('input').focus(function() {
+                // alert('Focused!');
+                $(this).css('background', 'pink');
+            })
+            $('input').blur(function() {
+                // alert('Focused!');
+                $(this).css('background', 'white');
+            })
+            
+
+            $('input').keyup(function(e) {
+                console.log(e.target.value);
+            })
+            */
+
+            $('select#gender').change(function(e) {
+                alert(e.target.value);
+            })
+
+            $('#form').submit(function(e) {
+                e.preventDefault();
+                var name = $('input#name').val();
+                var email = $('input#email').val();
+                console.log(name);
+                console.log(email);
+            })
+        });
+    </script>
+
+</body>
+</html>
